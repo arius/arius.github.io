@@ -7,6 +7,14 @@
      svg{
        width: 100%;
      }
+     
+     svg .free{
+       fill: green;
+     }
+     
+     svg .busy{
+       fill: red;
+     }
    </style> 
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -19304,7 +19312,8 @@
       $("svg g[inkscape\\:label=table]").on("click", function(ev, el){
         $element = $(ev.currentTarget)
         
-        alert($element.prop("id"))
+        $element.find("path").addClass("busy")
+        
       })
     </script>
   </body>  
